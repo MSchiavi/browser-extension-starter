@@ -14,7 +14,7 @@ module.exports = {
 
     popup: resolve(__dirname, "src/popup/index.tsx"),
     options: resolve(__dirname, "src/options/index.tsx"),
-    foreground: resolve(__dirname, "src/foreground/index.tsx"),
+    // foreground: resolve(__dirname, "src/foreground/index.tsx"),
   },
 
   output: {
@@ -47,11 +47,11 @@ module.exports = {
       template: "src/options/index.html",
       chunks: ["options"],
     }),
-    new HtmlWebpackPlugin({
-      filename: "foreground.html",
-      template: "src/foreground/index.html",
-      chunks: ["foreground"],
-    }),
+    // new HtmlWebpackPlugin({
+    //   filename: "foreground.html",
+    //   template: "src/foreground/index.html",
+    //   chunks: ["foreground"],
+    // }),
     new CopyWebpackPlugin({
       patterns: [
         { from: "src/manifest.json", to: "[name].[ext]" },
